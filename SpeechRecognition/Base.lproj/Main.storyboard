@@ -1,21 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Speech Decection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SpeechDecectionViewController" customModule="SpeechRecognition" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3W6-Um-otY">
+                                <rect key="frame" x="103" y="101" width="168.5" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start / Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Eo-WG-bTH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qoq-Zg-Quf">
+                                <rect key="frame" x="75" y="494.5" width="225" height="122.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap button to start voice recognition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Br-0l-udD">
+                                <rect key="frame" x="18.5" y="50" width="337.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Say a color name!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEm-o4-kgw">
+                                <rect key="frame" x="18.5" y="433.5" width="337.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldy-Zi-yDF">
+                                <rect key="frame" x="18.5" y="213.5" width="337.5" height="200"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ldy-Zi-yDF" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="4p3-Nx-gO8"/>
+                            <constraint firstItem="3W6-Um-otY" firstAttribute="height" secondItem="Ldy-Zi-yDF" secondAttribute="height" multiplier="1:4" id="8nU-We-N6E"/>
+                            <constraint firstItem="5Br-0l-udD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="95W-dA-hhd"/>
+                            <constraint firstItem="Ldy-Zi-yDF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="A3u-4l-pHt"/>
+                            <constraint firstItem="Ldy-Zi-yDF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="A9y-Bc-0sT"/>
+                            <constraint firstItem="5Br-0l-udD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="C16-7o-9EO"/>
+                            <constraint firstItem="Qoq-Zg-Quf" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="HtP-WI-FoX"/>
+                            <constraint firstItem="3W6-Um-otY" firstAttribute="width" secondItem="Ldy-Zi-yDF" secondAttribute="width" multiplier="1:2" id="P4x-6c-Uv4"/>
+                            <constraint firstItem="3W6-Um-otY" firstAttribute="top" secondItem="5Br-0l-udD" secondAttribute="bottom" constant="30" id="V23-np-VQe"/>
+                            <constraint firstItem="VEm-o4-kgw" firstAttribute="top" secondItem="Ldy-Zi-yDF" secondAttribute="bottom" constant="20" id="agB-uR-Ble"/>
+                            <constraint firstItem="5Br-0l-udD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="c6y-27-Zxa"/>
+                            <constraint firstItem="VEm-o4-kgw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jl5-6n-ZnE"/>
+                            <constraint firstItem="Qoq-Zg-Quf" firstAttribute="top" secondItem="VEm-o4-kgw" secondAttribute="bottom" constant="40" id="lOS-RY-wmE"/>
+                            <constraint firstItem="Ldy-Zi-yDF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-30" id="nQx-Eh-soV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Qoq-Zg-Quf" secondAttribute="bottom" constant="50" id="pUj-Ky-pJE"/>
+                            <constraint firstItem="Qoq-Zg-Quf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q5e-a4-yBT"/>
+                            <constraint firstItem="VEm-o4-kgw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="tBI-pp-MQf"/>
+                            <constraint firstItem="3W6-Um-otY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ueE-Dw-Zds"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="Qoq-Zg-Quf" id="Rjc-3B-cy2"/>
+                        <outlet property="detectedTextLabel" destination="Ldy-Zi-yDF" id="LLZ-rR-5t4"/>
+                        <outlet property="startButton" destination="3W6-Um-otY" id="KWe-9q-zei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

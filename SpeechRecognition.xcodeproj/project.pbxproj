@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A3866082152732600BAAD58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3866072152732600BAAD58 /* AppDelegate.swift */; };
-		2A38660A2152732600BAAD58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3866092152732600BAAD58 /* ViewController.swift */; };
+		2A38660A2152732600BAAD58 /* SpeechDecectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3866092152732600BAAD58 /* SpeechDecectionViewController.swift */; };
 		2A38660D2152732600BAAD58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A38660B2152732600BAAD58 /* Main.storyboard */; };
 		2A38660F2152732600BAAD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A38660E2152732600BAAD58 /* Assets.xcassets */; };
 		2A3866122152732600BAAD58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A3866102152732600BAAD58 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		2A3866042152732600BAAD58 /* SpeechRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3866072152732600BAAD58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A3866092152732600BAAD58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A3866092152732600BAAD58 /* SpeechDecectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDecectionViewController.swift; sourceTree = "<group>"; };
 		2A38660C2152732600BAAD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A38660E2152732600BAAD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A3866112152732600BAAD58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				2A3866072152732600BAAD58 /* AppDelegate.swift */,
-				2A3866092152732600BAAD58 /* ViewController.swift */,
+				2A3866092152732600BAAD58 /* SpeechDecectionViewController.swift */,
 				2A38660B2152732600BAAD58 /* Main.storyboard */,
 				2A38660E2152732600BAAD58 /* Assets.xcassets */,
 				2A3866102152732600BAAD58 /* LaunchScreen.storyboard */,
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A38660A2152732600BAAD58 /* ViewController.swift in Sources */,
+				2A38660A2152732600BAAD58 /* SpeechDecectionViewController.swift in Sources */,
 				2A3866082152732600BAAD58 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +275,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83JVLLMJTR;
 				INFOPLIST_FILE = SpeechRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Evgeniy-Kolenkov.SpeechRecognition";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +291,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83JVLLMJTR;
 				INFOPLIST_FILE = SpeechRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Evgeniy-Kolenkov.SpeechRecognition";
 				PRODUCT_NAME = "$(TARGET_NAME)";
